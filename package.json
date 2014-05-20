@@ -1,0 +1,25 @@
+{
+  "name": "gonzales",
+  "version": "0.0.0",
+  "description": "Secure SPDY Proxy.",
+  "main": "./lib/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/eamsen/node-gonzales"
+  },
+  "keywords": [
+    "spdy",
+    "proxy"
+  ],
+  "author": "Eugen Sawin <esawin@mozilla.com>",
+  "license": "MIT",
+  "dependencies": {
+    "spdy": "~1.26.0",
+    "colors": "~0.6.2",
+    "memory-cache": "0.0.5",
+    "png": "~3.0.3"
+  }
+}
