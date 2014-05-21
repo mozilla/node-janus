@@ -29,7 +29,6 @@ arguments.
 
     node lib/server.js -p <proxy-port> -a <pac-server-port> -k <key> -c <certificate>
 
-
 #### Firefox
 You need [Firefox Nightly](http://nightly.mozilla.org) for SPDY proxy support.
 When using self-signed certificates, you need to add it to Firefox first. To do
@@ -38,16 +37,21 @@ this, just use Firefox to call the proxy via its host-port combination.
     https://<proxy-host>:<proxy-port>/
 
 This should prompt you to add an exception for the self-signed certificate.
+
+##### Firefox (Desktop)
 Now, you can configure the secure proxy in `Preferences/Advanced/Network/Settings`.
 Select `Automatic proxy configuration URL` and set it to your custom PAC file or
-use the default configuration server by Gonzales.
+use the default configuration served by Gonzales.
 
     http://<gonzales-host>:<pac-server-port>
 
 This will serve a suitable PAC file with the proper host and ports set.
 
-**Now you are ready to browse the Web with Gonzales!**
-
+##### Firefox for Android
+For Fennec the steps are similar. Open `about:config` and set
+`network.proxy.autoconfig_url` to the location of your PAC file or the Gonzales
+PAC server.
+To load the PAC file and activate the proxy, set `network.proxy.type` to `2`.
 
 ### License
 MIT License - Copyright (C) 2014 Eugen Sawin
