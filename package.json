@@ -1,6 +1,6 @@
 {
   "name": "gonzales",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Secure SPDY Proxy.",
   "main": "./lib/server.js",
   "scripts": {
