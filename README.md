@@ -19,7 +19,7 @@ The Gonzales proxy comes with a default configuration suitable for testing.
 
     node lib/server.js
 
-This starts the proxy at port `55073` and the PAC server at port `55555` using
+This starts the proxy at port `55055` and the PAC server at port `55555` using
 the example keys provided in `keys/`.
 
 To set custom ports and provide your own certifications, use the command-line
