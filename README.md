@@ -38,7 +38,7 @@ this, just use Firefox to call the proxy via its host-port combination.
     https://<proxy-host>:<proxy-port>/
 
 This should prompt you to add an exception for the self-signed certificate.
-Now, you can configure the secure proxy in `Preferences/Advanced/Network/Settings`
+Now, you can configure the secure proxy in `Preferences/Advanced/Network/Settings`.
 Select `Automatic proxy configuration URL` and set it to your custom PAC file or
 use the default configuration server by Gonzales.
 
