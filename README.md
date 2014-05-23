@@ -50,6 +50,3 @@ For Fennec the steps are similar. Open `about:config` and set
 `network.proxy.autoconfig_url` to the location of your PAC file or the Gonzales
 PAC server.
 To load the PAC file and activate the proxy, set `network.proxy.type` to `2`.
-
-## License
-MIT License - Copyright (C) 2014 Eugen Sawin
