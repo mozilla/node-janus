@@ -16,23 +16,28 @@
     "proxy"
   ],
   "author": "Eugen Sawin <esawin@mozilla.com>",
+  "contributors":  [ "Sylvain Cleymans <sylvain.cleymans@gmail.com>" ],
   "license": "MIT",
   "dependencies": {
+    "cheerio": "0.15.0",
     "config": "^0.4.36",
+    "follow-redirects": "0.0.3",
     "hiredis": "^0.1.17",
+    "imagetype": "^0.2.0",
     "js-yaml": "^3.0.2",
     "memory-cache": "0.0.5",
+    "mozjpeg": "^0.1.2",
+    "optimist": "~0.6.1",
     "png": "~3.0.3",
+    "pngquant-bin": "^0.3.1",
     "redis": "^0.10.3",
     "spdy": "~1.26.0",
     "synchronize": "^0.9.3",
-    "cheerio": "0.15.0",
-    "temp": "^0.7.0",
-    "js-yaml": "^3.0.2",
-    "follow-redirects": "0.0.3"
+    "temp": "^0.7.0"
   },
   "devDependencies": {
     "jscs": "^1.4.5",
     "jshint": "^2.5.1"
   }
 }
+
