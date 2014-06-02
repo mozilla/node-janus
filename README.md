@@ -1,4 +1,5 @@
 # Gonzales - SPDY Privacy Proxy
+[![Build Status](https://travis-ci.org/eamsen/node-gonzales.svg?branch=develop)](https://travis-ci.org/eamsen/node-gonzales)
 
 ## Requirements
 * Node.js v10.0
