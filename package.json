@@ -4,6 +4,7 @@
   "description": "Secure SPDY Proxy.",
   "main": "./lib/server.js",
   "scripts": {
+    "pretest": "jshint lib",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,5 +23,8 @@
     "memory-cache": "0.0.5",
     "png": "~3.0.3",
     "optimist": "~0.6.1"
+  },
+  "devDependencies": {
+    "jshint": "^2.5.1"
   }
 }
