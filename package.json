@@ -37,8 +37,7 @@
     "temp": "^0.7.0"
   },
   "devDependencies": {
-    "jscs": "^1.4.5",
+    "jscs": "1.4.x",
     "jshint": "^2.5.1"
   }
 }
-
