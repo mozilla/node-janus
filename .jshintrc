@@ -24,5 +24,7 @@
   "maxstatements": 30,
   "maxcomplexity": 10,
   "maxlen": 80,
-  "node": true
+  "node": true,
+  "browser": false,
+  "esnext": true
 }
