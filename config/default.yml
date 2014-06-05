@@ -1,0 +1,17 @@
+# Gonzales server configuration.
+proxy:
+  # Gonzales listen port.
+  port: 55055
+  # SSL key path.
+  sslKeyPath: ./keys/key.pem
+  # SSL certificate path.
+  sslCertPath: ./keys/crt.pem
+
+# PAC (proxy automatic configuration) server configuration.
+pac:
+  # PAC server listen port.
+  port: 55155
+
+gzip:
+  # Compression level for gzip.
+  level: 9
