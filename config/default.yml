@@ -7,14 +7,16 @@ proxy:
   # SSL certificate path.
   sslCertPath: ./keys/crt.pem
 
+  # Whether or not the proxy will follow redirects
+  # itself or pass them back to the client
+  followRedirects: false
+
 # PAC (proxy auto config) server settings.
 pac:
   # PAC server listen port.
   port: 55155
 
-gzip:
-  # Compression level for gzip.
-  level: 9
+# Plugin settings below
 
 # Cache settings.
 cache:
@@ -40,3 +42,12 @@ cache:
   memory:
     enabled: true
     limit: 2000
+
+
+gzip:
+  # Compression level for gzip.
+  level: 9
+
+# Block gif2video by default
+gif2video:
+  enabled: false
