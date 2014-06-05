@@ -3,7 +3,7 @@
   "curly": true,
   "eqeqeq": true,
   "es3": false,
-  "forin": false,
+  "forin": true,
   "freeze": true,
   "immed": false,
   "indent": 2,
@@ -26,5 +26,6 @@
   "maxlen": 80,
   "node": true,
   "browser": false,
-  "esnext": true
+  "esnext": true,
+  "sub": true
 }

@@ -15,3 +15,16 @@ pac:
 gzip:
   # Compression level for gzip.
   level: 9
+
+# Cache configuration.
+cache:
+  # Enable cache. Don't rename it to 'enabled' as this will crash the parser.
+  use: true
+  # Supported cache types are:
+  # - basic (in-memory JS)
+  # - redis (requires Redis database)
+  type: basic
+  # Configuration for non-basic database server.
+  database:
+    host: localhost
+    port: 55255
