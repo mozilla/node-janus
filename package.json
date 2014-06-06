@@ -19,10 +19,13 @@
   "license": "MIT",
   "dependencies": {
     "config": "^0.4.36",
+    "hiredis": "^0.1.17",
     "js-yaml": "^3.0.2",
     "memory-cache": "0.0.5",
     "png": "~3.0.3",
-    "spdy": "~1.26.0"
+    "redis": "^0.10.3",
+    "spdy": "~1.26.0",
+    "synchronize": "^0.9.3"
   },
   "devDependencies": {
     "jscs": "^1.4.5",
