@@ -19,7 +19,7 @@ gzip:
 # Cache settings.
 cache:
   # Enable cache. Don't rename it to 'enabled' as this will crash the parser.
-  use: true
+  enabled: true
   # Supported cache types are:
   # - basic (in-memory JS)
   # - redis (requires Redis database)
@@ -34,9 +34,9 @@ cache:
     max: 604800
   # Cache items management.
   items:
-    use: false
+    enabled: false
     limit: 5000000
   # Cache memory usage settings in MB.
   memory:
-    use: true
+    enabled: true
     limit: 2000
