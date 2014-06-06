@@ -1,4 +1,4 @@
-# Gonzales server configuration.
+# Gonzales server settings.
 proxy:
   # Gonzales listen port.
   port: 55055
@@ -7,7 +7,7 @@ proxy:
   # SSL certificate path.
   sslCertPath: ./keys/crt.pem
 
-# PAC (proxy automatic configuration) server configuration.
+# PAC (proxy auto config) server settings.
 pac:
   # PAC server listen port.
   port: 55155
@@ -16,7 +16,7 @@ gzip:
   # Compression level for gzip.
   level: 9
 
-# Cache configuration.
+# Cache settings.
 cache:
   # Enable cache. Don't rename it to 'enabled' as this will crash the parser.
   use: true
@@ -24,7 +24,19 @@ cache:
   # - basic (in-memory JS)
   # - redis (requires Redis database)
   type: basic
-  # Configuration for non-basic database server.
+  # Settings for non-basic database server.
   database:
     host: localhost
     port: 55255
+  # Expiration time settings for cache items in seconds.
+  expire:
+    default: 30
+    max: 604800
+  # Cache items management.
+  items:
+    use: false
+    limit: 5000000
+  # Cache memory usage settings in MB.
+  memory:
+    use: true
+    limit: 2000
