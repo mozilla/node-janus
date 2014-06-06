@@ -25,7 +25,11 @@
     "png": "~3.0.3",
     "redis": "^0.10.3",
     "spdy": "~1.26.0",
-    "synchronize": "^0.9.3"
+    "synchronize": "^0.9.3",
+    "cheerio": "0.15.0",
+    "temp": "^0.7.0",
+    "js-yaml": "^3.0.2",
+    "follow-redirects": "0.0.3"
   },
   "devDependencies": {
     "jscs": "^1.4.5",
