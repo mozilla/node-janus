@@ -21,8 +21,10 @@ cluster:
 proxy:
   # Gonzales listen port.
   port: 55055
+
   # SSL key path.
   sslKeyPath: ./keys/key.pem
+
   # SSL certificate path.
   sslCertPath: ./keys/crt.pem
 
@@ -30,48 +32,57 @@ proxy:
   # itself or pass them back to the client
   followRedirects: false
 
+
 # PAC (proxy auto config) server settings.
 pac:
   # PAC server listen port.
   port: 55155
 
-# Plugin settings below
+
+# Plugin settings below.
 
 # Cache settings.
 cache:
-  # Enable cache. Don't rename it to 'enabled' as this will crash the parser.
   enabled: true
+
   # Supported cache types are:
   # - basic (in-memory JS)
   # - redis (requires Redis database)
   type: basic
+
   # Settings for non-basic database server.
   database:
     host: localhost
     port: 55255
+
   # Expiration time settings for cache items in seconds.
   expire:
     default: 30
     max: 604800
+
   # Cache items management.
   items:
     enabled: false
     limit: 5000000
+
   # Cache memory usage settings in MB.
   memory:
     enabled: true
     limit: 2000
 
+# Image compression settings.
 imgcompression:
   enabled: true
 
+# Adblock settings.
 adblock:
   enabled: false
 
+# Gzip compression settings.
 gzip:
-  # Compression level for gzip.
+  # Compression level.
   level: 9
 
-# Block gif2video by default
+# GIF to video transcoding settings.
 gif2video:
   enabled: false
