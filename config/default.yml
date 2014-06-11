@@ -43,6 +43,8 @@ cache:
     enabled: true
     limit: 2000
 
+imgcompression:
+  enabled: true
 
 gzip:
   # Compression level for gzip.
