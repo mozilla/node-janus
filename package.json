@@ -5,7 +5,8 @@
   "main": "./lib/index.js",
   "scripts": {
     "pretest": "jscs lib && jshint lib",
-    "test": "echo \"no tests\" && exit 0"
+    "test": "echo \"no tests\" && exit 0",
+    "start": "node lib/index.js"
   },
   "repository": {
     "type": "git",
