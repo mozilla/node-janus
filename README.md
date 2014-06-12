@@ -14,19 +14,22 @@ Next, use NPM to install all the dependencies.
     cd node-gonzales  
     npm install
 
-## Configuration
+## Configuration and Usage
 ### Gonzales
-The Gonzales proxy comes with a default configuration suitable for testing.
+You can find the default Gonzales configuration in `config/default.yml`.
+All settings are exposed and documented there.
 
-    node lib/server.js
+You may edit the settings there directly or override some of them with a custom
+config file, see the [node-config documentation](https://lorenwest.github.io/node-config/latest/)
+for more details about how the configuration works.
 
-This starts the proxy at port `55055` and the PAC server at port `55555` using
-the example keys provided in `keys/`.
+To start the proxy, just run
 
-To set custom ports and provide your own certifications, use the command-line
-arguments.
+    ./gonzales
 
-    node lib/server.js -p <proxy-port> -a <pac-server-port> -k <key> -c <certificate>
+
+The only command-line arguments supported are `-h` for help and `-v` for
+showing the version.
 
 ### Firefox
 You need [Firefox Nightly](http://nightly.mozilla.org) for SPDY proxy support.
