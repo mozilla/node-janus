@@ -86,3 +86,16 @@ gzip:
 # GIF to video transcoding settings.
 gif2video:
   enabled: false
+
+# Metrics reporting settings.
+metrics:
+  enabled: true
+  # Update interval settings in seconds.
+  interval:
+    # Update interval for general system stats reporting.
+    systemUpdate: 60
+  # Settings for the backend database.
+  database:
+    host: localhost
+    port: 55355
+  prefix: gonzales
