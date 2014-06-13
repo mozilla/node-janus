@@ -1,5 +1,5 @@
 # Gonzales - SPDY Privacy Proxy
-[![Build Status](https://travis-ci.org/eamsen/node-gonzales.svg?branch=develop)](https://travis-ci.org/eamsen/node-gonzales)
+[![Build Status](https://travis-ci.org/mozilla/node-gonzales.svg?branch=develop)](https://travis-ci.org/mozilla/node-gonzales)
 
 ## Requirements
 * Node.js v10.0
@@ -7,7 +7,7 @@
 ## Installation
 Gonzales is not published on NPM, so you need to get the code first.
 
-    git clone https://github.com/eamsen/node-gonzales  
+    git clone https://github.com/mozilla/node-gonzales
 
 Next, use NPM to install all the dependencies.
 
