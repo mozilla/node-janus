@@ -46,6 +46,9 @@ cache:
 imgcompression:
   enabled: true
 
+adblock:
+  enabled: false
+
 gzip:
   # Compression level for gzip.
   level: 9
