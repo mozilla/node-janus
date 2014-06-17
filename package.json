@@ -18,7 +18,8 @@
   ],
   "author": "Eugen Sawin <esawin@mozilla.com>",
   "contributors": [
-    "Sylvain Cleymans <sylvain.cleymans@gmail.com>"
+    "Sylvain Cleymans <sylvain.cleymans@gmail.com>",
+    "James Willcox <jwillcox@mozilla.com>"
   ],
   "license": "MIT",
   "dependencies": {
