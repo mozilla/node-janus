@@ -17,7 +17,10 @@
     "proxy"
   ],
   "author": "Eugen Sawin <esawin@mozilla.com>",
-  "contributors":  [ "Sylvain Cleymans <sylvain.cleymans@gmail.com>" ],
+  "contributors": [
+    "Sylvain Cleymans <sylvain.cleymans@gmail.com>",
+    "James Willcox <jwillcox@mozilla.com>"
+  ],
   "license": "MIT",
   "dependencies": {
     "cheerio": "0.15.0",
@@ -34,7 +37,8 @@
     "redis": "^0.10.3",
     "spdy": "~1.26.0",
     "synchronize": "^0.9.3",
-    "temp": "^0.7.0"
+    "temp": "^0.7.0",
+    "winston": "^0.7.3"
   },
   "devDependencies": {
     "jscs": "1.4.x",
