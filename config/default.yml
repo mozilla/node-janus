@@ -1,3 +1,9 @@
+
+logging:
+  # The minimum logging level for console messages
+  # (via Winston, https://github.com/flatiron/winston)
+  level: debug
+
 # Gonzales server settings.
 proxy:
   # Gonzales listen port.
