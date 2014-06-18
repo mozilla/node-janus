@@ -19,9 +19,10 @@ Next, use NPM to install all the dependencies.
 You can find the default Gonzales configuration in `config/default.yml`.
 All settings are exposed and documented there.
 
-You may edit the settings there directly or override some of them with a custom
-config file, see the [node-config documentation](https://lorenwest.github.io/node-config/latest/)
-for more details about how the configuration works.
+You may edit the settings directly in the default configuration file or
+preferably override some of settings using a custom configuration file,
+see the [node-config documentation](https://lorenwest.github.io/node-config/latest/)
+for more details about the configuration system.
 
 To start the proxy, just run
 
