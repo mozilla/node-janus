@@ -4,6 +4,19 @@ logging:
   # (via Winston, https://github.com/flatiron/winston)
   level: debug
 
+# Node Cluster options
+cluster:
+  enabled: false
+  workers:
+    # When true (the default), the number of workers
+    # is determined automatically based on number
+    # of CPUs on the machine.
+    auto: true
+
+    # When 'auto' is false, this number is used to
+    # determine the number of workers.
+    count: 8
+
 # Gonzales server settings.
 proxy:
   # Gonzales listen port.
