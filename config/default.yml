@@ -112,6 +112,7 @@ imgcompression:
 adblock:
   enabled: false
   optional: true
+  listUrl: 'http://pgl.yoyo.org/adservers/serverlist.php?&mimetype=plaintext'
 
 # Gzip compression settings.
 gzip:
@@ -136,3 +137,22 @@ metrics:
     host: localhost
     port: 55355
   prefix: janus
+
+# Test settings
+test:
+  logLevel: error
+
+  # test/tests/performance.js settings
+  performance:
+    enabled: false
+
+  phantom:
+    host: '127.0.0.1'
+    port: 3000
+
+  proxy:
+    host: '127.0.0.1'
+    port: 44044
+
+  localServer:
+    port: 8080
