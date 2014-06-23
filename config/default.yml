@@ -40,6 +40,17 @@ pac:
 
 
 # Plugin settings below.
+#
+# If a plugin has no config, the default looks like this:
+#
+# pluginName:
+#   enabled: true
+#   optional: false
+#
+# If 'enabled' is true, the plugin is loaded and used
+# by default. If false, it is not. If 'optional' is
+# true, it means the plugin can be enabled and disabled
+# by request-specific headers.
 
 # Cache settings.
 cache:
@@ -77,6 +88,7 @@ imgcompression:
 # Adblock settings.
 adblock:
   enabled: false
+  optional: true
 
 # Gzip compression settings.
 gzip:
@@ -86,6 +98,7 @@ gzip:
 # GIF to video transcoding settings.
 gif2video:
   enabled: false
+  optional: true
 
 # Metrics reporting settings.
 metrics:
