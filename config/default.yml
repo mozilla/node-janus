@@ -40,6 +40,36 @@ pac:
 
 
 # Plugin settings below.
+#
+# If a plugin has no config, the default looks like this:
+#
+# pluginName:
+#   enabled: false
+#   optional: false
+#
+# If 'enabled' is true, the plugin is loaded and used
+# by default. If false, it is not. If 'optional' is
+# true, it means the plugin can be enabled and disabled
+# by request-specific headers. The initial state is
+# still determined by the 'enabled' value.
+
+# DOM plugin, provides its own plugin system for
+# operating on a parsed HTML DOM
+dom:
+  enabled: true
+
+# ingress plugin, reads data from the forwarded response
+ingress:
+  enabled: true
+
+# egress plugin delivers the end result to the client
+egress:
+  enabled: true
+
+# gunzip plugin unzips gzip-formatted content, usually
+# because we need to parse it for the DOM plugin
+gunzip:
+  enabled: true
 
 # Cache settings.
 cache:
@@ -77,15 +107,18 @@ imgcompression:
 # Adblock settings.
 adblock:
   enabled: false
+  optional: true
 
 # Gzip compression settings.
 gzip:
+  enabled: true
   # Compression level.
   level: 9
 
 # GIF to video transcoding settings.
 gif2video:
   enabled: false
+  optional: true
 
 # Metrics reporting settings.
 metrics:
