@@ -3,6 +3,8 @@ logging:
   # The minimum logging level for console messages
   # (via Winston, https://github.com/flatiron/winston)
   level: debug
+  # Whether or not to colorize console logging
+  colorize: true
 
 # Node Cluster options
 cluster:
