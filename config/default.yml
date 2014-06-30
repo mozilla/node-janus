@@ -135,4 +135,4 @@ metrics:
   database:
     host: localhost
     port: 55355
-  prefix: gonzales
+  prefix: janus

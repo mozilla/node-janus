@@ -1,5 +1,5 @@
 {
-  "name": "gonzales",
+  "name": "janus",
   "version": "0.2.0",
   "description": "Secure SPDY Proxy.",
   "main": "./lib/index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/eamsen/node-gonzales"
+    "url": "git://github.com/eamsen/node-janus"
   },
   "keywords": [
     "spdy",
