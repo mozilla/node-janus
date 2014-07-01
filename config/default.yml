@@ -19,9 +19,9 @@ cluster:
     # determine the number of workers.
     count: 8
 
-# Gonzales server settings.
+# Proxy server settings.
 proxy:
-  # Gonzales listen port.
+  # Proxy listen port.
   port: 55055
 
   # SSL key path.
