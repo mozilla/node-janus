@@ -1,0 +1,5 @@
+
+cache:
+  # make cache optionnal so we can disable it for testing
+  optional: true
+
