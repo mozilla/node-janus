@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/eamsen/node-janus"
+    "url": "git://github.com/mozilla/node-janus"
   },
   "keywords": [
     "spdy",
