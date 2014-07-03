@@ -37,7 +37,8 @@
     "spdy": "~1.27.0",
     "temp": "^0.7.0",
     "winston": "^0.7.3",
-    "statsd-client": "0.0.15"
+    "statsd-client": "0.0.15",
+    "lzma-native": "^0.1.2"
   },
   "devDependencies": {
     "chai": "^1.9.1",
