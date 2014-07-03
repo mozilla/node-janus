@@ -6,6 +6,7 @@ var fs = require('fs');
 
 var helper = require('../helper/testHelper');
 var DummyResponse = require('../helper/dummyResponse');
+var DummyRequest = require('../helper/dummyRequest');
 
 var imgcompression = require('../../lib/plugins/imgcompression.js');
 
@@ -16,23 +17,23 @@ require('chai').should();
 
 function testImageSize(url, done) {
   http.get(url, function(source) {
+    var baseLength = parseInt(source.headers['content-length']);
+
     source.resume = function() {};
 
     var dest = new DummyResponse();
-    dest.on('data', function() {
+    var compressedLength = 0;
+    dest.on('data', function(buf) {
+      compressedLength += buf.length;
     });
     dest.on('end', function() {
-      var compressedLength = parseInt(dest.headers['content-length']);
-      var baseLength = parseInt(source.headers['content-length']);
-
       compressedSize += compressedLength;
       baseSize += baseLength;
       compressedLength.should.be.at.most(baseLength);
       done();
     });
 
-    dest.headers['content-length'] = source.headers['content-length'];
-    imgcompression.handleResponse(null, source, dest);
+    imgcompression.handleResponse(new DummyRequest(url), source, dest);
   });
 }
 
