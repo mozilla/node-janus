@@ -114,6 +114,12 @@ adblock:
   optional: true
   listUrl: 'http://pgl.yoyo.org/adservers/serverlist.php?&mimetype=plaintext'
 
+# XZ compression settings.
+xz:
+  enabled: true
+  # Anything higher requires a lot of memory to decode
+  level: 8
+
 # Gzip compression settings.
 gzip:
   enabled: true

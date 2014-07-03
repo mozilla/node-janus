@@ -1,5 +1,8 @@
 
 cache:
   # make cache optionnal so we can disable it for testing
+  enabled: false
   optional: true
 
+logging:
+  level: error
