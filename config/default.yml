@@ -1,12 +1,14 @@
-
+# Logging settings.
 logging:
   # The minimum logging level for console messages
-  # (via Winston, https://github.com/flatiron/winston)
+  # (via Winston, https://github.com/flatiron/winston).
   level: debug
-  # Whether or not to colorize console logging
+  # Whether or not to colorize console logging.
   colorize: true
+  # Whether or not to log debug metrics output.
+  metrics: true
 
-# Node Cluster options
+# Node Cluster options.
 cluster:
   enabled: false
   workers:
@@ -31,7 +33,7 @@ proxy:
   sslCertPath: ./keys/crt.pem
 
   # Whether or not the proxy will follow redirects
-  # itself or pass them back to the client
+  # itself or pass them back to the client.
   followRedirects: false
 
 
@@ -58,20 +60,20 @@ pac:
 # still determined by the 'enabled' value.
 
 # DOM plugin, provides its own plugin system for
-# operating on a parsed HTML DOM
+# operating on a parsed HTML DOM.
 dom:
   enabled: true
 
-# ingress plugin, reads data from the forwarded response
+# ingress plugin, reads data from the forwarded response.
 ingress:
   enabled: true
 
-# egress plugin delivers the end result to the client
+# egress plugin delivers the end result to the client.
 egress:
   enabled: true
 
 # gunzip plugin unzips gzip-formatted content, usually
-# because we need to parse it for the DOM plugin
+# because we need to parse it for the DOM plugin.
 gunzip:
   enabled: true
 
