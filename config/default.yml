@@ -150,7 +150,7 @@ test:
 
   # test/tests/performance.js settings
   performance:
-    enabled: false
+    enabled: true
 
   phantom:
     host: '127.0.0.1'

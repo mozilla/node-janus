@@ -24,7 +24,6 @@ function unloadModule(module) {
 
 exports.loadProxy = function() {
   SpdyProxy = require('../../lib/proxy');
-  SpdyProxy.log.logger.transports.console.level = config.test.logLevel;
   proxy = new SpdyProxy(config);
   proxy.listen(config.test.proxy.port);
 };
