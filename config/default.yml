@@ -5,8 +5,6 @@ logging:
   level: debug
   # Whether or not to colorize console logging.
   colorize: true
-  # Whether or not to log debug metrics output.
-  metrics: true
 
 # Node Cluster options.
 cluster:
@@ -82,8 +80,8 @@ cache:
   enabled: true
 
   # Supported cache types are:
-  # - basic (in-memory JS)
-  # - redis (requires Redis database)
+  # + basic (in-memory JS)
+  # + redis (requires Redis database)
   type: basic
 
   # Settings for non-basic database server.
@@ -140,11 +138,29 @@ metrics:
   interval:
     # Update interval for general system stats reporting.
     systemUpdate: 60
-  # Settings for the backend database.
-  database:
+  # Settings for the StatsD backend (see config/statsd.js).
+  # Only the host and prefix settings are special, as they are used for the
+  # client-only configuration.
+  statsd:
     host: localhost
     port: 55355
-  prefix: janus
+    prefix: janus
+    # Spawn an instance of StatsD to connect to if enabled, otherwise just
+    # use the settings to connect to an existing service.
+    spawn: true
+
+    # The following settings only have effect if spawning is enabled.
+
+    flushInterval: 60000
+    # Supported backends are (use ./backends/ prefix): 
+    # + graphite
+    # + console
+    # + debug (cleaner console output)
+    backends: [./backends/debug]
+    graphiteHost: localhost
+    graphitePort: 55455
+    console:
+      prettyprint: true
 
 # Test settings
 test:

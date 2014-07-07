@@ -1,6 +1,8 @@
 logging:
   level: error
-  metrics: false
 
 cluster:
   enabled: true
+
+metrics:
+  debug: false

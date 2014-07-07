@@ -99,6 +99,8 @@ Optional Variables:
 
 */
 {
-  port: 55355
-, backends: [ "./backends/console" ]
+  port: 55355,
+  backends: [ '../../lib/statsdConsoleBackend' ],
+  flush_counts: false,
+  flushInterval: 60000
 }

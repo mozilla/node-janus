@@ -4,6 +4,7 @@
   "description": "Secure SPDY Proxy.",
   "main": "./lib/index.js",
   "scripts": {
+    "postinstall": "cp -f lib/backends/* node_modules/statsd/backends/",
     "pretest": "jscs lib test && jshint lib test",
     "test": "NODE_ENV=test NODE_CONFIG_DIR=./config/test mocha -R spec -u exports ${MOCHA_ARGS} test/tests/",
     "start": "node lib/index.js"
