@@ -1,7 +1,10 @@
 
 cache:
-  # make cache optionnal so we can disable it for testing
+  # make cache optional so we can disable it for testing
   enabled: false
+  optional: true
+
+gzip:
   optional: true
 
 logging:
