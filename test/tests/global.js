@@ -19,24 +19,28 @@ module.exports = {
       'simple accept gzip': function(done) {
         var req = helper.makeRequest('http://localhost:8080/dummy.html',
                                      '+gzip');
-        req.headers['accept-encoding'] = 'compress, gzip';
 
         http.get(req, function(res) {
           should.exist(res.headers['content-encoding']);
-          res.headers['content-encoding'].indexOf('gzip')
-             .should.not.equal(-1);
+          res.headers['content-encoding']
+             .should.equal('gzip');
           done();
         });
       },
 
-      'simple no gzip': function(done) {
-        var req = helper.makeRequest(helper.getLocalUrl('dummy.html'),
-                                     '+gzip');
+    },
+
+    'xz': {
+
+      'simple accept xz': function(done) {
+        var req = helper.makeRequest('http://localhost:8080/dummy.html',
+                                     '+xz');
+        req.headers['accept-encoding'] = 'gzip, deflate, xz';
 
         http.get(req, function(res) {
-          if (res.headers['content-encoding']) {
-            res.headers['content-encoding'].indexOf('gzip').should.equal(-1);
-          }
+          should.exist(res.headers['content-encoding']);
+          res.headers['content-encoding']
+             .should.equal('xz');
           done();
         });
       }
