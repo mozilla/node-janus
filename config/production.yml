@@ -5,4 +5,7 @@ cluster:
   enabled: true
 
 metrics:
-  debug: false
+  statsd:
+    spawn: false
+    flushInterval: 30000
+    backends: [./backends/graphite]
