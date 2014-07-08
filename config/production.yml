@@ -7,5 +7,3 @@ cluster:
 metrics:
   statsd:
     spawn: false
-    flushInterval: 30000
-    backends: [./backends/graphite]
