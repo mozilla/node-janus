@@ -3,3 +3,7 @@ logging:
 
 cluster:
   enabled: true
+
+metrics:
+  statsd:
+    spawn: false

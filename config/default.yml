@@ -1,12 +1,12 @@
-
+# Logging settings.
 logging:
   # The minimum logging level for console messages
-  # (via Winston, https://github.com/flatiron/winston)
+  # (via Winston, https://github.com/flatiron/winston).
   level: debug
-  # Whether or not to colorize console logging
+  # Whether or not to colorize console logging.
   colorize: true
 
-# Node Cluster options
+# Node Cluster options.
 cluster:
   enabled: false
   workers:
@@ -31,7 +31,7 @@ proxy:
   sslCertPath: ./keys/crt.pem
 
   # Whether or not the proxy will follow redirects
-  # itself or pass them back to the client
+  # itself or pass them back to the client.
   followRedirects: false
 
 
@@ -58,20 +58,20 @@ pac:
 # still determined by the 'enabled' value.
 
 # DOM plugin, provides its own plugin system for
-# operating on a parsed HTML DOM
+# operating on a parsed HTML DOM.
 dom:
   enabled: true
 
-# ingress plugin, reads data from the forwarded response
+# ingress plugin, reads data from the forwarded response.
 ingress:
   enabled: true
 
-# egress plugin delivers the end result to the client
+# egress plugin delivers the end result to the client.
 egress:
   enabled: true
 
 # gunzip plugin unzips gzip-formatted content, usually
-# because we need to parse it for the DOM plugin
+# because we need to parse it for the DOM plugin.
 gunzip:
   enabled: true
 
@@ -80,8 +80,8 @@ cache:
   enabled: true
 
   # Supported cache types are:
-  # - basic (in-memory JS)
-  # - redis (requires Redis database)
+  # + basic (in-memory JS)
+  # + redis (requires Redis database)
   type: basic
 
   # Settings for non-basic database server.
@@ -138,11 +138,31 @@ metrics:
   interval:
     # Update interval for general system stats reporting.
     systemUpdate: 60
-  # Settings for the backend database.
-  database:
+  # Settings for the StatsD backend (see config/statsd.js).
+  # Only the host and prefix settings are special, as they are used for the
+  # client-only configuration.
+  statsd:
     host: localhost
     port: 55355
-  prefix: janus
+    prefix: janus
+    # Spawn an instance of StatsD to connect to if enabled, otherwise just
+    # use the settings to connect to an existing service.
+    spawn: true
+
+    # The following settings only have effect if spawning is enabled.
+
+    flushInterval: 60000
+    # Native backends include:
+    # + ./backends/graphite
+    # + ./backends/console
+    # + ./backends/repeater
+    # Otherwise all compatible backends installed via npm may be used, e.g.:
+    # + statsd-console-backend (cleaner console output)
+    backends: [statsd-console-backend]
+    graphiteHost: localhost
+    graphitePort: 55455
+    console:
+      prettyprint: true
 
 # Test settings
 test:

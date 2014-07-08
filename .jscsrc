@@ -1,5 +1,4 @@
 {
-  "requireDotNotation": true,
   "requireSpaceAfterKeywords": [
     "if", "else", "for", "while", "do", "switch", "return", "try", "catch"
   ],
@@ -60,5 +59,7 @@
   "maximumLineLength": 80,
   "requireCapitalizedConstructors": true,
   "requireDotNotation": true,
-  "disallowYodaConditions": true
+  "disallowYodaConditions": true,
+  "excludeFiles": [
+  ]
 }
