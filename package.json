@@ -4,7 +4,7 @@
   "description": "Secure SPDY Proxy.",
   "main": "./lib/index.js",
   "scripts": {
-    "postinstall": "cp -f lib/backends/* node_modules/statsd/backends/",
+    "postinstall": "ln -fs lib/backends/* node_modules/statsd/backends/",
     "pretest": "jscs lib test && jshint lib test",
     "test": "NODE_ENV=test NODE_CONFIG_DIR=./config/test mocha -R spec -u exports ${MOCHA_ARGS} test/tests/",
     "start": "node lib/index.js"
@@ -36,9 +36,10 @@
     "pngquant-bin": "^0.3.1",
     "redis": "^0.10.3",
     "spdy": "~1.27.0",
+    "sprintf-js": "0.0.7",
+    "statsd-client": "0.0.15",
     "temp": "^0.7.0",
     "winston": "^0.7.3",
-    "statsd-client": "0.0.15",
     "lzma-native": "^0.1.2"
   },
   "devDependencies": {
