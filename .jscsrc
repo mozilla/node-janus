@@ -61,7 +61,5 @@
   "requireDotNotation": true,
   "disallowYodaConditions": true,
   "excludeFiles": [
-    // Non-camel case StatsD identifiers.
-    "lib/backends/*"
   ]
 }

@@ -1,2 +1,0 @@
-// Non-camel case StatsD identifiers.
-lib/backends/*

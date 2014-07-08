@@ -152,11 +152,13 @@ metrics:
     # The following settings only have effect if spawning is enabled.
 
     flushInterval: 60000
-    # Supported backends are (use ./backends/ prefix): 
-    # + graphite
-    # + console
-    # + debug (cleaner console output)
-    backends: [./backends/debug]
+    # Native backends include:
+    # + ./backends/graphite
+    # + ./backends/console
+    # + ./backends/repeater
+    # Otherwise all compatible backends installed via npm may be used, e.g.:
+    # + statsd-console-backend (cleaner console output)
+    backends: [statsd-console-backend]
     graphiteHost: localhost
     graphitePort: 55455
     console:
