@@ -128,7 +128,7 @@ gzip:
 
 # GIF to video transcoding settings.
 gif2video:
-  enabled: false
+  enabled: true
   optional: true
 
 # Metrics reporting settings.
