@@ -117,6 +117,23 @@ exports.getContent = function(options, cb) {
   });
 };
 
+// Read an entire response into a Buffer
+exports.readResponse = function(response, cb) {
+  var bufs = [];
+
+  response.on('data', function(b) {
+    bufs.push(b);
+  });
+
+  response.on('end', function() {
+    cb(null, Buffer.concat(bufs));
+  });
+
+  response.on('error', function(err) {
+    cb(err);
+  });
+};
+
 exports.getFileContent = function(path) {
   var BUF_SIZE = 2048;
   var buf = new Buffer(BUF_SIZE);
