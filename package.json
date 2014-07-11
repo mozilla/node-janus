@@ -6,7 +6,8 @@
   "scripts": {
     "pretest": "jscs lib test && jshint lib test",
     "test": "NODE_ENV=test NODE_CONFIG_DIR=./config/test mocha -R spec -u exports ${MOCHA_ARGS} test/tests/",
-    "start": "node lib/index.js"
+    "start": "node lib/index.js",
+    "coverage": "NODE_ENV=test NODE_CONFIG_DIR=./config/test istanbul cover _mocha -- -R spec  -u exports ${MOCHA_ARGS} test/tests/"
   },
   "repository": {
     "type": "git",
@@ -47,6 +48,7 @@
     "chai": "^1.9.1",
     "colors": "^0.6.2",
     "http-server": "^0.6.1",
+    "istanbul": "^0.3.0",
     "jscs": "1.4.x",
     "jshint": "^2.5.1",
     "mocha": "^1.20.1",
