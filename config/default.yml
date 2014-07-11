@@ -65,6 +65,10 @@ dom:
 # ingress plugin, reads data from the forwarded response.
 ingress:
   enabled: true
+  # Whether or not it should accumulate the entire response
+  # in order to write out a 'x-original-content-length'
+  # header when there is no 'content-length' header.
+  accumulateUnknownLengths: true
 
 # egress plugin delivers the end result to the client.
 egress:
