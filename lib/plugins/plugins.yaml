@@ -5,4 +5,4 @@ request:
 # Response plugins go here, and the response pipeline is
 # constructed in the order given.
 response:
-  [ingress, gunzip, imgcompression, dom/gif2video, dom, xz, gzip, egress, cache]
+  [fork, ingress, gunzip, imgcompression, dom/gif2video, dom, xz, gzip, egress, cache]
