@@ -65,7 +65,7 @@ dom:
 # fork plugin, streams the source stream directly to the destination stream and
 # to the response chain for further processing.
 fork:
-  enabled: true
+  enabled: false
   optional: true
 
 # ingress plugin, reads data from the forwarded response.

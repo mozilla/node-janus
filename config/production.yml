@@ -7,3 +7,6 @@ cluster:
 metrics:
   statsd:
     spawn: false
+
+fork:
+  enabled: true
