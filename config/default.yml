@@ -62,6 +62,12 @@ pac:
 dom:
   enabled: true
 
+# fork plugin, streams the source stream directly to the destination stream and
+# to the response chain for further processing.
+fork:
+  enabled: false
+  optional: true
+
 # ingress plugin, reads data from the forwarded response.
 ingress:
   enabled: true
