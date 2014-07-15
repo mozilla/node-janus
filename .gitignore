@@ -1,3 +1,4 @@
 node_modules
 config/*runtime.js*
 config/test/runtime.json
+coverage/
