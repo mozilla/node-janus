@@ -147,6 +147,14 @@ adblock:
   optional: true
   listUrl: 'http://pgl.yoyo.org/adservers/serverlist.php?&mimetype=plaintext'
 
+# URL expander settings (resolves shortened URLs).
+urlexpander:
+  enabled: false
+  optional: true
+  # Number of redirections after which the request will be directly forwarded.
+  maxRedirect: 5
+  hostsFile: 'config/urlshorteners.txt'
+
 # XZ compression settings.
 xz:
   enabled: true

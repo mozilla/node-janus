@@ -44,12 +44,12 @@ module.exports = {
         helper.setupLocalServer('test/helper/content/imgs/', done);
       },
 
-      after: function() {
+      after: function(done) {
         console.log('\n\n\tTotal image compression: %d% (%dKB -> %dKB).',
                     (100 - (compressedSize * 100) / baseSize).toFixed(2),
                     Math.round(util.byteToKb(baseSize)),
                     Math.round(util.byteToKb(compressedSize)));
-        helper.cleanAll();
+        helper.cleanAll(done);
       },
     },
   },
