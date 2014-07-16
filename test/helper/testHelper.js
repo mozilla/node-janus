@@ -107,7 +107,7 @@ exports.getContent = function(options, cb) {
     });
 
     res.on('end', function() {
-      cb(content);
+      cb(content, res.statusCode, res.headers);
     });
   });
 
