@@ -5,6 +5,10 @@ logging:
   level: debug
   # Whether or not to colorize console logging.
   colorize: true
+
+  # Whether or not to log http2 information (very verbose).
+  http2: false
+
   console:
     enabled: true
     level: debug

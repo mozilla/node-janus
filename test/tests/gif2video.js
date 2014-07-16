@@ -1,6 +1,6 @@
 'use strict';
 
-var http = require('http');
+var http2 = require('http2');
 var cheerio = require('cheerio');
 
 var helper = require('../helper/testHelper');
@@ -53,7 +53,7 @@ module.exports = {
 
             // Verify we can request the WebM
             req = helper.makeRequest(videoSrc, '+gif2video');
-            http.get(req, function(res) {
+            http2.get(req, function(res) {
               res.headers['content-type'].should.equal('video/webm');
 
               helper.readResponse(res, function(err, buf) {

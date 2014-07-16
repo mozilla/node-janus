@@ -1,6 +1,6 @@
 'use strict';
 
-var http = require('http');
+var http2 = require('http2');
 var should = require('chai').should();
 var cheerio = require('cheerio');
 
@@ -21,7 +21,7 @@ module.exports = {
         var req = helper.makeRequest('http://localhost:8080/dummy.html',
                                      '+gzip');
 
-        http.get(req, function(res) {
+        http2.get(req, function(res) {
           should.exist(res.headers['content-encoding']);
           res.headers['content-encoding']
              .should.equal('gzip');
@@ -38,7 +38,7 @@ module.exports = {
                                      '+xz');
         req.headers['accept-encoding'] = 'gzip, deflate, xz';
 
-        http.get(req, function(res) {
+        http2.get(req, function(res) {
           should.exist(res.headers['content-encoding']);
           res.headers['content-encoding']
              .should.equal('xz');
@@ -50,7 +50,7 @@ module.exports = {
     'status codes': {
       '200': function(done) {
         var req = helper.makeRequest(helper.localAddress, '+gzip');
-        http.get(req, function(res) {
+        http2.get(req, function(res) {
           res.statusCode.should.equal(200);
           done();
         });
@@ -59,7 +59,7 @@ module.exports = {
       '404': function(done) {
         var req = helper.makeRequest(helper.getLocalUrl('doesntexist'),
                                      '+gzip');
-        http.get(req, function(res) {
+        http2.get(req, function(res) {
           res.statusCode.should.equal(404);
           done();
         });

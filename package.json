@@ -14,7 +14,7 @@
     "url": "git://github.com/mozilla/node-janus"
   },
   "keywords": [
-    "spdy",
+    "http2",
     "proxy"
   ],
   "author": "Eugen Sawin <esawin@mozilla.com>",
@@ -38,12 +38,12 @@
     "png": "~3.0.3",
     "pngquant-bin": "^0.3.1",
     "redis": "^0.10.3",
-    "spdy": "~1.27.0",
     "sprintf-js": "0.0.7",
     "statsd": "^0.7.1",
     "statsd-console-backend": "^0.1.0",
     "temp": "^0.7.0",
-    "winston": "^0.7.3"
+    "winston": "^0.7.3",
+    "http2": "git://github.com/snorp/node-http2#fixes"
   },
   "devDependencies": {
     "chai": "^1.9.1",

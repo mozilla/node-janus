@@ -1,15 +1,16 @@
 'use strict';
 
 var spawn = require('child_process').spawn;
-var http = require('http');
+var http2 = require('http2');
 var url = require('url');
-var spdy = require('spdy');
 var fs = require('fs');
 var config = require('config');
 
 var localServer = null;
 var proxy = null;
-var SpdyProxy = null;
+var Http2Proxy = null;
+
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 // Recursively delete modules from the 'require' cache
 function unloadModule(module) {
@@ -23,8 +24,8 @@ function unloadModule(module) {
 }
 
 exports.loadProxy = function() {
-  SpdyProxy = require('../../lib/proxy');
-  proxy = new SpdyProxy(config);
+  Http2Proxy = require('../../lib/proxy');
+  proxy = new Http2Proxy(config);
   proxy.listen(config.test.proxy.port);
 };
 
@@ -64,29 +65,15 @@ exports.cleanAll = function() {
 
 // Create the approriate request to go through the proxy
 exports.makeRequest = function(requestedUrl, options) {
-  var agent = spdy.createAgent({
+  return {
+    protocol: 'https:',
     host: config.test.proxy.host,
     port: config.test.proxy.port,
-    rejectUnauthorized: false,
-    spdy: {
-      ssl: true,
-      decompress: false
-    },
-  });
-
-  var u = url.parse(requestedUrl);
-
-  return {
-    host: u.host,
-    path: u.href,
-    port: u.port,
+    path: requestedUrl,
+    agent: new http2.Agent(),
     headers: {
-      host: u.host,
-      path: u.href,
-      port: u.port,
       'x-janus-options': options
     },
-    agent: agent,
   };
 };
 
@@ -99,7 +86,7 @@ exports.writeToFile = function(path, content) {
 
 // Get the content of a request
 exports.getContent = function(options, cb) {
-  var req = http.get(options, function(res) {
+  var req = http2.get(options, function(res) {
     var content = '';
     res.on('data', function(data) {
       content += data.toString();
@@ -111,7 +98,7 @@ exports.getContent = function(options, cb) {
   });
 
   req.on('error', function(e) {
-    console.log('Error with request:', e.message);
+    console.error('Error with request:', e);
     cb(null);
   });
 };
