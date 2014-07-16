@@ -49,11 +49,6 @@ proxy:
   # SSL certificate path.
   sslCertPath: ./keys/crt.pem
 
-  # Whether or not the proxy will follow redirects
-  # itself or pass them back to the client.
-  followRedirects: false
-
-
 # PAC (proxy auto config) server settings.
 pac:
   # PAC server listen port.
