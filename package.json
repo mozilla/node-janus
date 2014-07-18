@@ -31,7 +31,7 @@
     "imagetype": "^0.3.0",
     "js-yaml": "^3.0.2",
     "memory-cache": "0.0.5",
-    "mozjpeg": "^0.1.2",
+    "mozjpeg-bin": "^0.2.0",
     "png": "~3.0.3",
     "pngquant-bin": "^0.3.1",
     "redis": "^0.10.3",
