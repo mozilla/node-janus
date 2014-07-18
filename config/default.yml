@@ -5,6 +5,21 @@ logging:
   level: debug
   # Whether or not to colorize console logging.
   colorize: true
+  console:
+    enabled: true
+    level: debug
+    # Whether or not to colorize console logging.
+    colorize: true
+
+  file:
+    enabled: true
+    level: debug
+    # Maximum size of the log file before it is rolled over (2MB default).
+    maxsize: 2097152
+    # Whether messages should be logged as json or not.
+    json: false
+    # The filename for the log file
+    filename: janus.log
 
 # Node Cluster options.
 cluster:

@@ -1,5 +1,9 @@
 logging:
-  level: error
+  console:
+    level: error
+
+  file:
+    level: error
 
 cluster:
   enabled: true
