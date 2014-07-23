@@ -7,7 +7,6 @@ var helper = require('../helper/testHelper');
 var DummyResponse = require('../helper/dummyResponse');
 var DummyRequest = require('../helper/dummyRequest');
 var adblock = rewire('../../lib/plugins/adblock.js');
-var config = require('config').test;
 
 require('chai').should();
 
@@ -31,8 +30,6 @@ module.exports = {
           }
         };
 
-        adblock.__get__('log').logger
-               .transports.console.level = config.logLevel;
         adblock.init(adblockConfig, done);
       });
     },
