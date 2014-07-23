@@ -4,6 +4,7 @@
 ## Requirements
 * [Node.js v10.0](http://nodejs.org)
 * [FFmpeg](http://ffmpeg.org/)
+* mozjpeg build dependencies (see [mozjpeg build requirements](https://github.com/mozilla/mozjpeg/blob/master/BUILDING.txt))
 
 ## Installation
 Get the code first.
