@@ -147,7 +147,7 @@ metrics:
   # Update interval settings in seconds.
   interval:
     # Update interval for general system stats reporting.
-    systemUpdate: 60
+    systemUpdate: 10
   # Settings for the StatsD backend (see config/statsd.js).
   # Only the host and prefix settings are special, as they are used for the
   # client-only configuration.
@@ -161,7 +161,7 @@ metrics:
 
     # The following settings only have effect if spawning is enabled.
 
-    flushInterval: 60000
+    flushInterval: 10000
     # Native backends include:
     # + ./backends/graphite
     # + ./backends/console
