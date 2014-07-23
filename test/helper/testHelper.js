@@ -6,7 +6,6 @@ var url = require('url');
 var spdy = require('spdy');
 var fs = require('fs');
 var config = require('config');
-var PacServer = require('../../lib/pac');
 var profile = require('mozilla-profile-builder');
 var sleep = require('sleep');
 var colors = require('colors');
@@ -16,8 +15,6 @@ var proxy = null;
 var SpdyProxy = null;
 var firefox = null;
 var spdyAgent = null;
-
-var pacServer = new PacServer(config);
 
 exports.launchFirefox = function() {
   var path = config.test.firefoxPath;
@@ -69,7 +66,6 @@ exports.loadProxy = function() {
   SpdyProxy = require('../../lib/proxy');
   proxy = new SpdyProxy(config);
   proxy.listen(config.proxy.port);
-  pacServer.listen(config.pac.port);
 };
 
 exports.localAddress = 'http://127.0.0.1:' + config.test.localServer.port + '/';
