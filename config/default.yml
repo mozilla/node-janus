@@ -188,22 +188,3 @@ metrics:
     graphitePort: 55455
     console:
       prettyprint: true
-
-# Test settings
-test:
-  logLevel: error
-
-  # test/tests/performance.js settings
-  performance:
-    enabled: false
-
-  phantom:
-    host: '127.0.0.1'
-    port: 3000
-
-  proxy:
-    host: '127.0.0.1'
-    port: 44044
-
-  localServer:
-    port: 8080
