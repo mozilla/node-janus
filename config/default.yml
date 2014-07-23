@@ -57,14 +57,8 @@ proxy:
   # itself or pass them back to the client.
   followRedirects: false
 
-
-# PAC (proxy auto config) server settings.
-pac:
-  # PAC server listen port.
-  port: 55155
   # Whether or not to tunnel SSL traffic.
   tunnelSsl: false
-
 
 # Plugin settings below.
 #
