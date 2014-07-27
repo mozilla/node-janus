@@ -24,7 +24,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "cheerio": "0.15.0",
+    "cheerio": "^0.17.0",
     "config": "^0.4.36",
     "follow-redirects": "0.0.3",
     "hiredis": "^0.1.17",
