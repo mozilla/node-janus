@@ -3,3 +3,4 @@ config/*runtime.js*
 config/test/runtime.json
 config/local.yml
 coverage/
+*.log

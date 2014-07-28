@@ -9,3 +9,32 @@ gzip:
 
 logging:
   level: error
+
+logging:
+  http2: true
+  console:
+    enabled: false
+
+  file:
+    enabled: true
+    level: debug
+    filename: test.log
+    clobber: true
+
+# Test settings
+test:
+
+  # test/tests/performance.js settings
+  performance:
+    enabled: false
+
+  phantom:
+    host: '127.0.0.1'
+    port: 3000
+
+  proxy:
+    host: '127.0.0.1'
+    port: 44044
+
+  localServer:
+    port: 8080

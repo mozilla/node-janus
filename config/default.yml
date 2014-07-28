@@ -5,6 +5,25 @@ logging:
   level: debug
   # Whether or not to colorize console logging.
   colorize: true
+  console:
+    enabled: true
+    level: debug
+    timestamp: false
+    # Whether or not to colorize console logging.
+    colorize: true
+
+  file:
+    enabled: true
+    level: debug
+    timestamp: true
+    # Maximum size of the log file before it is rolled over in MB.
+    maxsize: 2
+    # Whether messages should be logged as json or not.
+    json: false
+    # The filename for the log file.
+    filename: proxy.log
+    # Overwrite log on start.
+    clobber: false
 
 # Node Cluster options.
 cluster:
@@ -173,22 +192,3 @@ metrics:
     graphitePort: 55455
     console:
       prettyprint: true
-
-# Test settings
-test:
-  logLevel: error
-
-  # test/tests/performance.js settings
-  performance:
-    enabled: false
-
-  phantom:
-    host: '127.0.0.1'
-    port: 3000
-
-  proxy:
-    host: '127.0.0.1'
-    port: 44044
-
-  localServer:
-    port: 8080
