@@ -17,4 +17,4 @@ fork:
 
 cache:
   expire:
-    default: 604800
+    default: 86400

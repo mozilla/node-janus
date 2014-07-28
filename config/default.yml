@@ -121,7 +121,7 @@ cache:
   # Expiration time settings for cache items in seconds.
   expire:
     default: 30
-    max: 604800
+    max: 86400
 
   # Cache items management.
   items:
