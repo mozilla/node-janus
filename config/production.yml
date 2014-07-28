@@ -1,9 +1,9 @@
 logging:
   console:
-    level: error
+    enabled: false
 
   file:
-    level: error
+    level: warn
 
 cluster:
   enabled: true
