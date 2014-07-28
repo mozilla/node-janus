@@ -14,3 +14,7 @@ metrics:
 
 fork:
   enabled: true
+
+cache:
+  expire:
+    default: 604800
