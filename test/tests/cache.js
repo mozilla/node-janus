@@ -25,11 +25,11 @@ module.exports = {
         var req = helper.makeRequest(helper.getLocalUrl(tmpFilename),
                                      '+cache');
 
-        helper.writeToFile('test/helper/content/' + tmpFilename, '1');
+        fs.writeFileSync('test/helper/content/' + tmpFilename, '1');
         helper.getContent(req, function(content) {
           content.should.equal('1');
 
-          helper.writeToFile('test/helper/content/' + tmpFilename, '2');
+          fs.writeFileSync('test/helper/content/' + tmpFilename, '2');
           helper.getContent(req, function(content) {
             fs.unlink('test/helper/content/' + tmpFilename);
             content.should.equal('1');
@@ -43,11 +43,11 @@ module.exports = {
         var req = helper.makeRequest(helper.getLocalUrl(tmpFilename),
                                      '+cache');
 
-        helper.writeToFile('test/helper/content/' + tmpFilename, '1');
+        fs.writeFileSync('test/helper/content/' + tmpFilename, '1');
         helper.getContent(req, function(content) {
           content.should.equal('1');
 
-          helper.writeToFile('test/helper/content/' + tmpFilename, '2');
+          fs.writeFileSync('test/helper/content/' + tmpFilename, '2');
           sleep.sleep(1);
           helper.getContent(req, function(content) {
             fs.unlink('test/helper/content/' + tmpFilename);
@@ -64,11 +64,11 @@ module.exports = {
         var req = helper.makeRequest(helper.getLocalUrl(tmpFilename),
                                      '-cache');
 
-        helper.writeToFile('test/helper/content/' + tmpFilename, '1');
+        fs.writeFileSync('test/helper/content/' + tmpFilename, '1');
         helper.getContent(req, function(content) {
           content.should.equal('1');
 
-          helper.writeToFile('test/helper/content/' + tmpFilename, '2');
+          fs.writeFileSync('test/helper/content/' + tmpFilename, '2');
           helper.getContent(req, function(content) {
             fs.unlink('test/helper/content/' + tmpFilename);
             content.should.equal('2');
