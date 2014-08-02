@@ -2,6 +2,7 @@
 
 var http = require('http');
 var should = require('chai').should();
+var cheerio = require('cheerio');
 
 var helper = require('../helper/testHelper');
 
@@ -64,5 +65,23 @@ module.exports = {
         });
       },
     },
+
+    'DOM': {
+      'ISO to UTF8 conversion': function(done) {
+        // add gif2video plugin to enable DOM parsing
+        var req = helper.makeRequest(helper.getLocalUrl('iso8859.html'),
+                                     '+gif2video -gzip');
+
+        helper.getContent(req, function(content, statusCode, headers) {
+          headers['content-type'].indexOf('UTF-8').should.not.equal(-1);
+
+          var $ = cheerio.load(content);
+          var body = $('body').text().trim();
+          body.should.equal('Voix ambiguë d\'un cœur qui, au ' +
+                            'zéphyr, préfère les jattes de kiwis.');
+          done();
+        });
+      },
+    }
   }
 };
