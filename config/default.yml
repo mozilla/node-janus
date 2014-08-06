@@ -125,12 +125,16 @@ cache:
 
   # Cache items management.
   items:
-    enabled: false
-    limit: 5000000
+    # 0 means no limit on number of items in cache.
+    limit: 0
+    # Min and max item sizes stored in KB.
+    size:
+      min: 0
+      max: 51200
 
   # Cache memory usage settings in MB.
   memory:
-    enabled: true
+    # 0 means no limit on memory size.
     limit: 2000
 
 # Image compression settings.
