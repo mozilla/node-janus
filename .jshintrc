@@ -22,7 +22,7 @@
   "maxparams": 10,
   "maxdepth": 4,
   "maxstatements": 30,
-  "maxcomplexity": 10,
+  "maxcomplexity": 12,
   "maxlen": 80,
   "node": true,
   "browser": false,
