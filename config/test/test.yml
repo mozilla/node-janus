@@ -21,6 +21,15 @@ logging:
     filename: test.log
     clobber: true
 
+metrics:
+  enabled: true
+  system:
+    enabled: false
+  statsd:
+    enabled: false
+    spawn: false
+
+
 # Test settings
 test:
 

@@ -175,14 +175,17 @@ video:
 # Metrics reporting settings.
 metrics:
   enabled: true
-  # Update interval settings in seconds.
-  interval:
+  # All update interval settings are in seconds.
+  # General system metrics settings.
+  system:
+    enabled: true
     # Update interval for general system stats reporting.
-    systemUpdate: 10
+    interval: 10
   # Settings for the StatsD backend (see config/statsd.js).
   # Only the host and prefix settings are special, as they are used for the
   # client-only configuration.
   statsd:
+    enabled: true
     host: localhost
     port: 55355
     prefix: janus
