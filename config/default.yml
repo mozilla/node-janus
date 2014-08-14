@@ -99,14 +99,14 @@ ingress:
 egress:
   enabled: true
 
-# gunzip plugin unzips gzip-formatted content, usually
-# because we need to parse it for the DOM plugin.
+# gunzip plugin unzips gzip-formatted content, making it
+# easier to process or recompress the content
 gunzip:
-  enabled: true
+  enabled: false
 
 # Cache settings.
 cache:
-  enabled: true
+  enabled: false
 
   # Supported cache types are:
   # + basic (in-memory JS)
