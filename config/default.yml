@@ -17,7 +17,7 @@ logging:
     level: debug
     timestamp: true
     # Maximum size of the log file before it is rolled over in MB.
-    maxsize: 2
+    maxSize: 20
     # Whether messages should be logged as json or not.
     json: false
     # The filename for the log file.
