@@ -1,5 +1,5 @@
 # Janus - Privacy & Compression Proxy
-[![Build Status](https://travis-ci.org/mozilla/node-janus.svg?branch=develop)](https://travis-ci.org/mozilla/node-janus)
+[![Build Status](https://travis-ci.org/mozilla/node-janus.svg?branch=master)](https://travis-ci.org/mozilla/node-janus)
 
 ## Requirements
 * [Node.js v10.0](http://nodejs.org)
