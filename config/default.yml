@@ -164,6 +164,14 @@ gif2video:
   enabled: true
   optional: true
 
+# Transcode videos to make them smaller
+video:
+  enabled: true
+  optional: true
+
+  # The quality level to use. 0-50, lower is better
+  quality: 30
+
 # Metrics reporting settings.
 metrics:
   enabled: true
