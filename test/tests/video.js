@@ -22,6 +22,10 @@ function testVideoSize(url, done) {
     var baseLength = parseInt(source.headers['content-length']);
 
     source.resume = function() {};
+    source.forward = function(dest) {
+      dest.writeHead(source.statusCode, source.headers);
+      source.pipe(dest);
+    };
 
     var dest = new DummyResponse();
     var compressedLength = 0;
