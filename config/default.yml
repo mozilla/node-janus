@@ -99,14 +99,14 @@ ingress:
 egress:
   enabled: true
 
-# gunzip plugin unzips gzip-formatted content, usually
-# because we need to parse it for the DOM plugin.
+# gunzip plugin unzips gzip-formatted content, making it
+# easier to process or recompress the content
 gunzip:
-  enabled: true
+  enabled: false
 
 # Cache settings.
 cache:
-  enabled: true
+  enabled: false
 
   # Supported cache types are:
   # + basic (in-memory JS)
@@ -163,6 +163,14 @@ gzip:
 gif2video:
   enabled: true
   optional: true
+
+# Transcode videos to make them smaller
+video:
+  enabled: true
+  optional: true
+
+  # The quality level to use. 0-50, lower is better
+  quality: 30
 
 # Metrics reporting settings.
 metrics:
