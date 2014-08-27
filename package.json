@@ -41,7 +41,7 @@
     "spdy": "~1.27.0",
     "sprintf-js": "0.0.7",
     "statsd": "^0.7.1",
-    "statsd-console-backend": "^0.1.0",
+    "statsd-console-backend": ">=0.1.0",
     "temp": "^0.7.0",
     "winston": "^0.7.3"
   },
