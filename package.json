@@ -33,6 +33,7 @@
     "js-yaml": "^3.0.2",
     "lzma-native": "^0.1.2",
     "memory-cache": "0.0.5",
+    "memwatch": "^0.2.2",
     "mozjpeg-bin": "^0.2.0",
     "node-statsd": "0.0.7",
     "png": "~3.0.3",

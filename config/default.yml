@@ -207,3 +207,12 @@ metrics:
     graphitePort: 55455
     console:
       prettyprint: true
+
+  # Profiling settings.
+  profile:
+    # Heap profiling, can degrade performance.
+    heap:
+      enabled: true
+    # Lightweight leak detection.
+    leaks:
+      enabled: true
