@@ -135,6 +135,8 @@ cache:
 # Image compression settings.
 imgcompression:
   enabled: true
+  # Use libjpeg-turbo instead of mozjpeg.
+  turbo: true
 
 # Adblock settings.
 adblock:
