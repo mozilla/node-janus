@@ -79,7 +79,7 @@ exports.getLocalUrl = function(path) {
 // Launch a local webserver
 exports.setupLocalServer = function(path, cb) {
   localServer = spawn('./node_modules/http-server/bin/http-server',
-                       ['-c1', '-p', config.test.localServer.port, path]);
+                       ['-c2', '-p', config.test.localServer.port, path]);
   localServer.stdout.on('data', function(data) {
     if (cb && data.toString().indexOf('stop') !== -1) {
       cb();

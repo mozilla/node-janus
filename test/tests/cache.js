@@ -39,6 +39,7 @@ module.exports = {
       },
 
       'expiration': function(done) {
+        this.timeout(4000);
         var tmpFilename = temp.path({ dir: '.' });
         var req = helper.makeRequest(helper.getLocalUrl(tmpFilename),
                                      '+cache');
@@ -48,7 +49,7 @@ module.exports = {
           content.should.equal('1');
 
           fs.writeFileSync('test/helper/content/' + tmpFilename, '2');
-          sleep.sleep(1);
+          sleep.sleep(2);
           helper.getContent(req, function(content) {
             fs.unlink('test/helper/content/' + tmpFilename);
             content.should.equal('2');
