@@ -8,7 +8,8 @@
     "test": "NODE_ENV=test NODE_CONFIG_DIR=./config/test mocha -R spec -u exports ${MOCHA_ARGS} test/tests/",
     "start": "node lib/index.js",
     "coverage": "NODE_ENV=test NODE_CONFIG_DIR=./config/test istanbul cover _mocha -- -R spec  -u exports ${MOCHA_ARGS} test/tests/",
-    "marionette": "NODE_ENV=test NODE_CONFIG_DIR=./config/test mocha -R spec -u exports ${MOCHA_ARGS} test/perfomance/marionette.js"
+    "marionette": "NODE_ENV=test NODE_CONFIG_DIR=./config/test mocha -R spec -u exports ${MOCHA_ARGS} test/perfomance/marionette.js",
+    "networksimulation": "NODE_ENV=test NODE_CONFIG_DIR=./config/test node test/helper/networksimulator.js"
   },
   "repository": {
     "type": "git",
@@ -57,6 +58,7 @@
     "mocha": "^1.20.1",
     "mozilla-profile-builder": "^0.4.0",
     "phantom": "^0.6.3",
+    "read": "^1.0.5",
     "rewire": "^2.0.1",
     "sleep": "^1.1.8"
   }
