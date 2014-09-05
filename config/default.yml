@@ -49,11 +49,6 @@ proxy:
   # SSL certificate path.
   sslCertPath: ./keys/crt.pem
 
-  # Whether or not the proxy will follow redirects
-  # itself or pass them back to the client.
-  followRedirects: false
-
-
 # PAC (proxy auto config) server settings.
 pac:
   # PAC server listen port.
@@ -146,6 +141,14 @@ adblock:
   enabled: false
   optional: true
   listUrl: 'http://pgl.yoyo.org/adservers/serverlist.php?&mimetype=plaintext'
+
+# URL expander settings (resolves shortened URLs).
+urlexpander:
+  enabled: false
+  optional: true
+  # Number of redirections after which the request will be directly forwarded.
+  maxRedirect: 5
+  hostsFile: 'config/urlshorteners.txt'
 
 # XZ compression settings.
 xz:
