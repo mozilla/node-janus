@@ -49,11 +49,6 @@ proxy:
   # SSL certificate path.
   sslCertPath: ./keys/crt.pem
 
-  # Whether or not the proxy will follow redirects
-  # itself or pass them back to the client.
-  followRedirects: false
-
-
 # PAC (proxy auto config) server settings.
 pac:
   # PAC server listen port.
@@ -99,14 +94,14 @@ ingress:
 egress:
   enabled: true
 
-# gunzip plugin unzips gzip-formatted content, usually
-# because we need to parse it for the DOM plugin.
+# gunzip plugin unzips gzip-formatted content, making it
+# easier to process or recompress the content
 gunzip:
-  enabled: true
+  enabled: false
 
 # Cache settings.
 cache:
-  enabled: true
+  enabled: false
 
   # Supported cache types are:
   # + basic (in-memory JS)
@@ -147,6 +142,14 @@ adblock:
   optional: true
   listUrl: 'http://pgl.yoyo.org/adservers/serverlist.php?&mimetype=plaintext'
 
+# URL expander settings (resolves shortened URLs).
+urlexpander:
+  enabled: false
+  optional: true
+  # Number of redirections after which the request will be directly forwarded.
+  maxRedirect: 5
+  hostsFile: 'config/urlshorteners.txt'
+
 # XZ compression settings.
 xz:
   enabled: true
@@ -164,17 +167,28 @@ gif2video:
   enabled: true
   optional: true
 
+# Transcode videos to make them smaller
+video:
+  enabled: true
+  optional: true
+
+  # The quality level to use. 0-50, lower is better
+  quality: 30
+
 # Metrics reporting settings.
 metrics:
   enabled: true
-  # Update interval settings in seconds.
-  interval:
+  # All update interval settings are in seconds.
+  # General system metrics settings.
+  system:
+    enabled: true
     # Update interval for general system stats reporting.
-    systemUpdate: 10
+    interval: 10
   # Settings for the StatsD backend (see config/statsd.js).
   # Only the host and prefix settings are special, as they are used for the
   # client-only configuration.
   statsd:
+    enabled: true
     host: localhost
     port: 55355
     prefix: janus
@@ -196,3 +210,12 @@ metrics:
     graphitePort: 55455
     console:
       prettyprint: true
+
+  # Profiling settings.
+  profile:
+    # Heap profiling, can degrade performance.
+    heap:
+      enabled: true
+    # Lightweight leak detection.
+    leaks:
+      enabled: true

@@ -15,8 +15,8 @@ module.exports = {
         helper.setupLocalServer('test/helper/content/gif2video/', done);
       },
 
-      after: function() {
-        helper.cleanAll();
+      after: function(done) {
+        helper.cleanAll(done);
       },
 
       testConversion: function(done) {

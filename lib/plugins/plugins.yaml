@@ -1,8 +1,8 @@
 # Request plugins go here, and are serviced in the order given.
 request:
-  [adblock, cache, dom/gif2video]
+  [urlexpander, adblock, cache, dom/gif2video]
 
 # Response plugins go here, and the response pipeline is
 # constructed in the order given.
 response:
-  [fork, ingress, gunzip, imgcompression, dom/gif2video, dom, xz, gzip, egress, cache]
+  [fork, ingress, gunzip, imgcompression, video, dom/gif2video, dom, xz, gzip, egress, cache]

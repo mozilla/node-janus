@@ -47,7 +47,7 @@ exports.setupLocalServer = function(path, cb) {
   localServer.stderr.on('data', function() {});
 };
 
-exports.cleanAll = function() {
+exports.cleanAll = function(done) {
   // unload the proxy
   if (proxy) {
     proxy.close();
@@ -57,8 +57,15 @@ exports.cleanAll = function() {
 
   // kill the local webserver
   if (localServer !== null) {
+    if (done) {
+      localServer.on('exit', function() {
+        done();
+      });
+    }
     localServer.kill('SIGINT');
     localServer = null;
+  } else if (done) {
+    done();
   }
 };
 

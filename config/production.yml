@@ -11,6 +11,9 @@ cluster:
 metrics:
   statsd:
     spawn: false
+  profile:
+    heap:
+      enabled: false
 
 fork:
   enabled: true
