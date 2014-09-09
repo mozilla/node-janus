@@ -44,21 +44,21 @@ CertOverrideListener.prototype = {
 };
 
 
-function addCertOverride(host, port, bits) {
+function addCertOverride() {
   var req = Cc["@mozilla.org/xmlextras/xmlhttprequest;1"]
             .createInstance(Ci.nsIXMLHttpRequest);
   try {
     // We send a request to any page and intercept the proxy certificate error.
-    var url = 'http://localhost/';
+    var host = prefs.getCharPref('host');
+    var port = prefs.getIntPref('port');
+    var url = 'https://' + host + ':' + port + '/';
     var bits = Ci.nsICertOverrideService.ERROR_UNTRUSTED |
                Ci.nsICertOverrideService.ERROR_MISMATCH |
                Ci.nsICertOverrideService.ERROR_TIME;
 
     req.open("GET", url, false);
     req.channel.notificationCallbacks =
-                new CertOverrideListener(prefs.getCharPref('host'),
-                                         prefs.getIntPref('port'),
-                                         bits);
+                new CertOverrideListener(host, port, bits);
     req.send(null);
   } catch (e) {
     // This will fail since the server is not trusted yet
