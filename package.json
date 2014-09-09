@@ -4,10 +4,12 @@
   "description": "Secure SPDY Proxy.",
   "main": "./lib/index.js",
   "scripts": {
-    "pretest": "jscs lib test && jshint lib test",
+    "pretest": "jscs lib test/tests/ && jshint lib test/tests/",
     "test": "NODE_ENV=test NODE_CONFIG_DIR=./config/test mocha -R spec -u exports ${MOCHA_ARGS} test/tests/",
     "start": "node lib/index.js",
-    "coverage": "NODE_ENV=test NODE_CONFIG_DIR=./config/test istanbul cover _mocha -- -R spec  -u exports ${MOCHA_ARGS} test/tests/"
+    "coverage": "NODE_ENV=test NODE_CONFIG_DIR=./config/test istanbul cover _mocha -- -R spec  -u exports ${MOCHA_ARGS} test/tests/",
+    "marionette": "NODE_ENV=test NODE_CONFIG_DIR=./config/test mocha -R spec -u exports ${MOCHA_ARGS} test/perfomance/marionette.js",
+    "networksimulation": "NODE_ENV=test NODE_CONFIG_DIR=./config/test node test/helper/networksimulator.js"
   },
   "repository": {
     "type": "git",
@@ -31,6 +33,7 @@
     "imagetype": "^0.3.0",
     "js-yaml": "^3.0.2",
     "lzma-native": "^0.1.2",
+    "marionette-client": "^1.1.8",
     "memory-cache": "0.0.5",
     "memwatch": "^0.2.2",
     "mozjpeg-bin": "^0.2.0",
@@ -53,7 +56,9 @@
     "jscs": "1.4.x",
     "jshint": "^2.5.1",
     "mocha": "^1.20.1",
+    "mozilla-profile-builder": "^0.4.0",
     "phantom": "^0.6.3",
+    "read": "^1.0.5",
     "rewire": "^2.0.1",
     "sleep": "^1.1.8"
   }
