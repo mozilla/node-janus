@@ -43,8 +43,10 @@ exports.launchFirefox = function() {
 
   profile.create(options, function(err, instance) {
     firefox = spawn(path,
-          ['--marionette', '-profile', instance.path]);
+          ['--marionette', '-no-remote', '-profile', instance.path]);
 
+    firefox.stdout.on('data', function() {});
+    firefox.stderr.on('data', function() {});
     firefox.on('error', function(err) {
       console.log("Unable to launch firefox.");
       process.exit(2);
@@ -189,7 +191,7 @@ exports.readResponse = function(response, cb) {
 };
 
 exports.getPercentage = function(first, second) {
-  return (100 - (second * 100) / first).toFixed(2);
+  return (100 * (second / first - 1)).toFixed(2);
 };
 
 // Convert byte size to size string with appropriate unit.
