@@ -99,4 +99,17 @@ To get coverage statistics use
 
     npm run-script coverage
 
+To run performance tests using Marionette you need to point the configuration
+to your Firefox binary in file `config/test/test.yml`, setting
+`test.firefoxPath`. Then launch the tests using
+
+    npm run-script marionette
+
+To simulate different mobile network environments, use
+
+    npm run-script networksimulation 2G|3G|4G
+
+and stop the system-wide simulation by reverting to the defaults using
+
+    npm run-script networksimulation default
 

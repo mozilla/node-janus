@@ -1,6 +1,7 @@
 'use strict';
 
 var punycode = require('punycode');
+var fs = require('fs');
 var rewire = require('rewire');
 
 var helper = require('../helper/testHelper');
@@ -39,9 +40,8 @@ module.exports = {
     'fetchBlockList': {
       'fetch valid': function(done) {
         var list = {};
-        var listFromFile = helper
-                           .getFileContent('test/helper/content/block-list')
-                           .split('\n');
+        var listFromFile = fs.readFileSync('test/helper/content/block-list')
+                           .toString().split('\n');
         var fetchBlockList = adblock.__get__('fetchBlockList');
         fetchBlockList(helper.getLocalUrl('block-list'), list, function() {
           listFromFile.forEach(function(elt) {
