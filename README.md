@@ -90,6 +90,22 @@ To view and process the full metrics, you need a receiver compatible to StatsD
 metrics. To establish a connection, simply set the `metrics.statsd` settings
 accordingly in `config/default.yml` or your local overriding config files.
 
+### Self-Signed Certificate
+You will also need to use your own certificate for your server FQDN. You can
+generate a new key and a new certificate simply by launching this command from
+`node-janus` root directory:
+
+    openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout keys/key.pem -out keys/crt.pem
+
+Be careful to correctly set the `Common Name` with your server FQDN, e.g. for
+`example.com`:
+
+    Common Name (e.g. server FQDN or YOUR name) []:example.com
+
+Because a self-signed certificate is not delivered by a trusted CA, you will
+have to manually add it to your browser. Please have a look to the [Firefox](#firefox)
+section for more details.
+
 ## Development
 ### Additional Requirements
 * [spdylay](https://github.com/tatsuhiro-t/spdylay)
