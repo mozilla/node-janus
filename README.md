@@ -34,7 +34,11 @@ The only command-line arguments supported are `-h` for help and `-v` for
 showing the version.
 
 ### Firefox
-You need [Firefox Nightly](http://nightly.mozilla.org) for SPDY proxy support.
+#### Minimal Version
+You need at least Firefox 33 ([Firefox Beta](http://beta.mozilla.org)) for SPDY
+proxy support.
+
+#### Self-Signed Certificates
 When using self-signed certificates, you need to add it to Firefox first. To do
 this, use Firefox to call the proxy via its host-port combination.
 
