@@ -4,6 +4,7 @@
 ## Requirements
 * [Node.js v10.0](http://nodejs.org)
 * [FFmpeg](http://ffmpeg.org/)
+* [GraphicsMagick](http://www.graphicsmagick.org)
 
 ## Installation
 Get the code first.

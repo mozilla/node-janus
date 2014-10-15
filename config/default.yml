@@ -130,7 +130,13 @@ imgcompression:
   # Use libjpeg-turbo instead of mozjpeg.
   turbo: true
   # Minimum image size to compress in KB.
-  minSize: 20
+  minSize: 25
+  # Maximum image size to compress in KB.
+  maxSize: 4096
+  # Resize huge images to save bandwidth (might break layouts).
+  resize: false
+  # Default re-encoding image quality (0-100).
+  defaultQuality: 60
 
 # Adblock settings.
 adblock:

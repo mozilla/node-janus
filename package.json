@@ -28,10 +28,10 @@
   "dependencies": {
     "cheerio": "^0.17.0",
     "config": "^0.4.36",
+    "gm": "^1.16.0",
     "hiredis": "^0.1.17",
     "iconv": "^2.1.4",
     "imagetype": "^0.3.0",
-    "janus-image-worker": "git+https://github.com/mozilla/janus-image-worker.git",
     "js-yaml": "^3.0.2",
     "lzma-native": "^0.1.2",
     "marionette-client": "^1.1.8",
