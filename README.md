@@ -35,12 +35,11 @@ showing the version.
 
 ### Firefox
 #### Minimal Version
-You need at least Firefox 33 ([Firefox Beta](http://beta.mozilla.org)) for SPDY
-proxy support.
+You need at least Firefox 33 for SPDY proxy support.
 
 #### Self-Signed Certificates
-When using self-signed certificates, you need to add it to Firefox first. To do
-this, use Firefox to call the proxy via its host-port combination.
+When using a self-signed certificate, you need to add it to Firefox first. To do
+this, use Firefox to open the proxy via its host-port combination.
 
     https://<proxy.host>:<proxy.port>/
 
@@ -74,8 +73,8 @@ To load the PAC file and activate the proxy, set `network.proxy.type` to `2`.
 
 ## Production Deployment
 ### Additional Requirements
-* [Redis](http://redis.io)
-* [StatsD](https://github.com/etsy/statsd)
+* `optional` [Redis](http://redis.io)
+* `optional` [StatsD](https://github.com/etsy/statsd)
 
 By default, the proxy uses a basic in-memory cache and does only log basic
 metric stats. Additionally, the proxy supports a Redis-based caching solution
@@ -92,12 +91,12 @@ accordingly in `config/default.yml` or your local overriding config files.
 
 ### Self-Signed Certificate
 You will also need to use your own certificate for your server FQDN. You can
-generate a new key and a new certificate simply by launching this command from
+generate a new key and a new certificate simply by executing this command from
 `node-janus` root directory:
 
     openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout keys/key.pem -out keys/crt.pem
 
-Be careful to correctly set the `Common Name` with your server FQDN, e.g. for
+Be careful to correctly set the `Common Name` with your server FQDN, e.g., for
 `example.com`:
 
     Common Name (e.g. server FQDN or YOUR name) []:example.com
@@ -107,8 +106,11 @@ have to manually add it to your browser. Please have a look to the [Firefox](#fi
 section for more details.
 
 ## Development
-### Additional Requirements
-* [spdylay](https://github.com/tatsuhiro-t/spdylay)
+We would be happy to accept pull requests for known issues or useful new
+features, so we encourage you to contribute!
+
+Please make sure all tests pass locally before putting the request up for
+review, additional tests for new features would be great, too.
 
 ### Tests
 To run all tests use
