@@ -137,6 +137,8 @@ imgcompression:
   enabled: true
   # Use libjpeg-turbo instead of mozjpeg.
   turbo: true
+  # Minimum image size to compress in KB.
+  minSize: 20
 
 # Adblock settings.
 adblock:
