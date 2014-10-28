@@ -35,6 +35,9 @@ proxy:
 pac:
   port: 44144
 
+fork:
+  optional: true
+
 # Test settings
 test:
   # test/tests/performance.js settings

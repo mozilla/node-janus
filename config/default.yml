@@ -27,7 +27,7 @@ logging:
 
 # Node Cluster options.
 cluster:
-  enabled: false
+  enabled: true
   workers:
     # When true (the default), the number of workers
     # is determined automatically based on number
@@ -80,7 +80,7 @@ dom:
 # to the response chain for further processing.
 fork:
   enabled: false
-  optional: true
+  optional: false
 
 # ingress plugin, reads data from the forwarded response.
 ingress:
@@ -88,7 +88,7 @@ ingress:
   # Whether or not it should accumulate the entire response
   # in order to write out a 'x-original-content-length'
   # header when there is no 'content-length' header.
-  accumulateUnknownLengths: true
+  accumulateUnknownLengths: false
 
 # egress plugin delivers the end result to the client.
 egress:
@@ -168,12 +168,12 @@ gzip:
 
 # GIF to video transcoding settings.
 gif2video:
-  enabled: true
+  enabled: false
   optional: true
 
 # Transcode videos to make them smaller
 video:
-  enabled: true
+  enabled: false
   optional: true
 
   # The quality level to use. 0-50, lower is better

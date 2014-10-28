@@ -3,10 +3,7 @@ logging:
     enabled: false
 
   file:
-    level: warn
-
-cluster:
-  enabled: true
+    level: error
 
 metrics:
   statsd:
@@ -14,10 +11,3 @@ metrics:
   profile:
     heap:
       enabled: false
-
-fork:
-  enabled: true
-
-cache:
-  expire:
-    default: 86400
