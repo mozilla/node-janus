@@ -40,7 +40,7 @@
     "node-statsd": "0.0.7",
     "png": "~3.0.3",
     "redis": "^0.10.3",
-    "spdy": "~1.27.0",
+    "spdy": "^1.27.0",
     "sprintf-js": "0.0.7",
     "statsd": "^0.7.1",
     "statsd-console-backend": ">=0.1.0",
