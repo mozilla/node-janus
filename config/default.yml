@@ -182,6 +182,10 @@ video:
 # Metrics reporting settings.
 metrics:
   enabled: true
+  # Metrics selection allows to restrict metrics reports to a whitelisted set.
+  selection:
+    enabled: false
+    set: ['proxy.request', 'proxy.response']
   # All update interval settings are in seconds.
   # General system metrics settings.
   system:
