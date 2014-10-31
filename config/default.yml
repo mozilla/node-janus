@@ -229,3 +229,5 @@ metrics:
   request:
     # Enable locale metrics.
     locale: true
+    # Enable IP hash metrics.
+    ipHash: true
