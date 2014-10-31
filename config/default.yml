@@ -203,9 +203,7 @@ metrics:
     # Spawn an instance of StatsD to connect to if enabled, otherwise just
     # use the settings to connect to an existing service.
     spawn: true
-
     # The following settings only have effect if spawning is enabled.
-
     flushInterval: 10000
     # Native backends include:
     # + ./backends/graphite
@@ -218,7 +216,6 @@ metrics:
     graphitePort: 55455
     console:
       prettyprint: true
-
   # Profiling settings.
   profile:
     # Heap profiling, can degrade performance.
@@ -227,3 +224,8 @@ metrics:
     # Lightweight leak detection.
     leaks:
       enabled: true
+
+  # Request-specific metrics.
+  request:
+    # Enable locale metrics.
+    locale: true
