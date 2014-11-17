@@ -161,8 +161,6 @@ xz:
 # Gzip compression settings.
 gzip:
   enabled: true
-  # Compression level.
-  level: 9
 
 # GIF to video transcoding settings.
 gif2video:
