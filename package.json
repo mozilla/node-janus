@@ -1,5 +1,5 @@
 {
-  "name": "janus",
+  "name": "jet",
   "version": "0.7.0",
   "description": "Secure SPDY Proxy.",
   "main": "./lib/index.js",
