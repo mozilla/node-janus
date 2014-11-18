@@ -161,6 +161,10 @@ xz:
 # Gzip compression settings.
 gzip:
   enabled: true
+  # GZip settings.
+  chunkSize: 16384
+  windowBits: 15
+  memLevel: 8
 
 # GIF to video transcoding settings.
 gif2video:
