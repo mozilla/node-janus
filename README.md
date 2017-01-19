@@ -134,3 +134,7 @@ and stop the system-wide simulation by reverting to the defaults using
 
     npm run-script networksimulation default
 
+### References
+
+* [compy](https://github.com/barnacs/compy) - compression proxy supporting Brotli and WebP
+* [Google Flywheel](https://www.usenix.org/conference/nsdi15/technical-sessions/presentation/agababov) - NSDI 2015 paper discussing techniques used by Chrome data saver
