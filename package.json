@@ -34,7 +34,7 @@
     "janus-image-worker": "git+https://github.com/mozilla/janus-image-worker.git",
     "js-yaml": "^3.0.2",
     "lzma-native": "^0.1.2",
-    "marionette-client": "^1.1.8",
+    "marionette-client": "1.9.0",
     "memory-cache": "0.0.5",
     "memwatch": "^0.2.2",
     "node-statsd": "0.0.7",
