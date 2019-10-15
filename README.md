@@ -43,7 +43,7 @@ this, use Firefox to call the proxy via its host-port combination.
 This should prompt you to add an exception for the self-signed certificate.
 
 ### Automatic Client Configuration Using the Add-On
-The prefered way for using the proxy is by installing the [Janus
+The preferred way for using the proxy is by installing the [Janus
 add-on](https://addons.mozilla.org/en-US/firefox/addon/janus-proxy-configurator/).
 When using the add-on, you can conveniently configure the optional features of
 the proxy and view some statistics on bandwidth savings.
